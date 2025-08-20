@@ -132,6 +132,10 @@ p {
   text-align: center;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 .purple {
   color: #3233a6;
 }

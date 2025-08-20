@@ -6,4 +6,4 @@
 <h1>This is layout</h1>
 
 <h1>This is main layout</h1>
-<slot></slot>
+{@render children()}

@@ -1,3 +1,13 @@
+<script>
+  let {children, ...props} = $props();
+  console.log({props});
+</script>
+
+
+<button {...props}>
+  {@render children()}
+</button>
+
 <style>
   button {
     background-color: black;
