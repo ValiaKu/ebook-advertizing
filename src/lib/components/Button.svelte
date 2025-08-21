@@ -1,8 +1,7 @@
 <script>
-  let {children, ...props} = $props();
-  console.log({props});
+  let { children, ...props } = $props();
+  console.log({ props });
 </script>
-
 
 <button {...props}>
   {@render children()}

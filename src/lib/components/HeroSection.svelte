@@ -4,7 +4,6 @@
   import Button from "./Button.svelte";
 </script>
 
-
 <section class="hero">
   <div class="hero-showcase text-center bold">
     <h1 class="purple uppercase">Move to</h1>
@@ -25,10 +24,11 @@
       calculating my cost of living, choosing an apartment. That's why I wrote
       this e-book, to tell you how I did it. No bullshit, no stress.
     </p>
-    <Button color="red" size="big" onclick={() => console.log('test')}>Purchase E-book for $10</Button>
+    <Button color="red" size="big" onclick={() => console.log("test")}
+      >Purchase E-book for $10</Button
+    >
   </div>
 </section>
-
 
 <style>
   .hero {
