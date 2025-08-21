@@ -34,7 +34,7 @@
       excerpt: `Successfully managing your finances is crucial to enjoying a stress-free life in Spain. This chapter provides practical guidance on how to budget for your new life, manage your expenses, and navigate Spain’s financial systems. We’ll start by discussing the cost of living in different regions of Spain, from the more affordable countryside to the pricier urban centers. You’ll learn how to create a realistic budget that covers essentials such as housing, utilities, groceries, and healthcare, while also allowing for the enjoyment of Spain’s culinary delights and cultural activities. We’ll also delve into the Spanish banking system, offering tips on how to open a bank account, choose the right financial products, and understand local banking fees. Taxation is another key area we’ll cover, with explanations of how to file taxes as a resident or non-resident, and the implications of Spain’s tax treaties with other countries. Whether you’re planning to retire, work, or invest in Spain, this chapter will equip you with the financial knowledge to make the most of your resources and enjoy a comfortable life in your new home.`,
     },
   ];
-  
+
   let selectedChapterNumber = $state(2);
   let selectedChapter = $derived(
     chapters.find((chapter) => chapter.number === selectedChapterNumber),
@@ -47,7 +47,7 @@
 
 </script>
 
-<section class="chapter-preview default-margin">
+<section class="landing-page-section default-margin">
   <div class="chapter-container">
     <ul>
       {#each chapters as chapter, index}
@@ -77,12 +77,7 @@
 </section>
 
 <style>
-  .chapter-preview {
-    padding: 80px;
-    margin-left: 12vw;
-    margin-right: 20vw;
-    max-width: 1150px;
-  }
+
   .chapter-container {
     display: flex;
     justify-content: space-between;

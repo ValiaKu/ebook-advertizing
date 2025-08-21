@@ -1,4 +1,20 @@
-<h1>FAQ Item 1</h1>
+<script>
+  import chevronDown from '$assets/icons/chevron-down.svg';
+  let {faq, isExpanded, ...props} = $props();
+  
+
+</script>
+
+<button class="container" class:container-expanded={isExpanded} {...props}>
+  <div class="question-and-answer">
+    <p class="question mb-s">{faq.question}</p>
+    <p class="answer">
+      {faq.answer}
+    </p>
+  </div>
+  
+  <img src={chevronDown} alt="Read more" />
+</button>
 
 <style>
   .container {

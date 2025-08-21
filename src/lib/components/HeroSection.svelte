@@ -4,7 +4,7 @@
   import {Button} from "$components";
 </script>
 
-<section class="hero">
+<section class="hero ">
   <div class="hero-showcase text-center bold">
     <h1 class="purple uppercase">Move to</h1>
     <h1 class="purple mb-xs uppercase">Spain</h1>

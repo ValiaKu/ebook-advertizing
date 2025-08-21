@@ -1,8 +1,9 @@
 <script>
-  import {FaqItem} from '$components';
-  import {Button} from '$components';
-  import twitterIcon from '$assets/icons/twitter.webp'
-   const faqs = [
+  import { FaqItem } from "$components";
+  import { Button } from "$components";
+  import twitterIcon from "$assets/icons/twitter.webp";
+
+  const faqs = [
     {
       question: "What will I learn from this ebook?",
       answer:
@@ -29,17 +30,26 @@
         "Absolutely. We offer a 30-day money-back guarantee. If you feel that the ebook did not meet your expectations or didn't provide the value you were looking for, simply contact us within 30 days of your purchase, and we’ll issue a full refund—no questions asked.",
     },
   ];
+
+  let questionCurrentlyExpanded = $state(-1);
+
+  const onclick = (index) => {
+    if(questionCurrentlyExpanded === index) {
+      questionCurrentlyExpanded = -1;
+    } else {
+      questionCurrentlyExpanded = index;
+    }
+  };
 </script>
 
-
-<section class="fac-section">
+<section class="landing-page-section">
   <h2 class="mb-l">Frequently Asked Questions</h2>
   <div class="fac-container">
-    <FaqItem />
-    <FaqItem />
-    <FaqItem />
+    {#each faqs as faq, index}
+      <FaqItem {faq} isExpanded={index === questionCurrentlyExpanded} onclick={()=> onclick(index)} />
+    {/each}
   </div>
-  <div class="additional-info">
+  <div class="additional-info mt-m">
     <Button class="mt-s">Buy now</Button>
     <p class="mt-m">Any other questions?</p>
     <a href="https://x.com/KIZO_ES">
