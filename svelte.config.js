@@ -6,6 +6,10 @@ const config = {
   // Consult https://kit.svelte.dev/docs/integrations#preprocessors
   // for more information about preprocessors
   preprocess: vitePreprocess(),
+  // Add this line:
+  compilerOptions: {
+    runes: true,
+  },
 
   kit: {
     // adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
@@ -13,8 +17,8 @@ const config = {
     // See https://kit.svelte.dev/docs/adapters for more information about adapters.
     adapter: adapter(),
     alias: {
-      $components: 'src/lib/components',
-      $assets: 'src/assets',
+      $components: "src/lib/components",
+      $assets: "src/assets",
     },
   },
 };
